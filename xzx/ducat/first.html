@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>Jquery</title>
+		<script src="jquery.min.js"></script>
+		
+		<script>
+			$(document).ready(function()
+			{
+				$('#tar').hide();
+				$('#sub').click(function()
+				{
+				$('#tar').toggle(2000);
+				})
+			})
+			
+			
+			$(document).ready(function()
+			{
+				$('#sub2').click(function()
+				{
+					var name = $('.un').val();
+					alert(name);
+				})
+			})
+			
+			
+			$(document).ready(function()
+			{
+				$('#sub3').click(function()
+				{
+					var text = $('#t1').val();
+					$('#t2').val(text);
+					$('#t1').val("");
+				})
+			})
+			
+			
+			$(document).ready(function()
+			{
+				$('.sub4').click(function()
+				{
+					var t = $('.tarmsg').val();
+					$('.msg').html(t);
+				})
+			})
+			
+			
+			$(document).ready(function()
+			{
+				$('#clk').click(function()
+				{
+					var c = $(this).attr('category');
+					alert(c);
+				})
+			})
+			
+			
+			$(document).ready(function()
+			{
+				$('p').click(function()
+				{
+					$(this).hide();
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<div id="tar">Hello</div>
+		<input type="submit" value="Show / Hide" id="sub">
+		
+		<hr/>
+		
+		Enter Name <input type="text" class="un">
+		<input type="submit" id="sub2">
+		
+		<hr/>
+		
+		<input type="text" id="t1">
+		<input type="text" id="t2">
+		<input type="submit" id="sub3">
+		
+		<hr/>
+		
+		<div class="msg"></div>
+		<input type="text" class="tarmsg">
+		<input type="submit" class="sub4">
+		
+		<hr/>
+		
+		<a href="javascript:void();" id="clk" category="Mobiles">Click Here</a>
+		<hr/>
+		
+		<p>
+			hyper text markup language
+		</p>
+		
+		<p>
+			Cascading style sheet
+		</p>
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
